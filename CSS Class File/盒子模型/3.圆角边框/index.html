@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TT</title>
+
+  <style>
+    /*border-radius
+    圆角边框
+    四角
+    左上右下 / 右上左下
+    左上/ 右上/ 右下/ 左下
+
+    圆角==1/2宽度 --> 圆圈（最大值）
+    */
+
+    div[class="1"]{
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      border:10px solid blue;
+      background-color: aqua;
+      border-radius: 10px;      /* 圆角边框 */
+      border-radius: 0px 50px;  /* 左上右下  右上左下 */
+    }
+    div[class="2"]{
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      border:10px solid red;
+      border-radius: 0px 100px 0px 0px;  /* 左上右下  右上左下 */
+    }
+    div[class="3"]{
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+      border: 5px solid green;
+      border-radius: 50px 50px 0px 0px;
+    }
+  </style>
+
+
+</head>
+<body>
+
+  <div class="1">柠檬</div>
+  <div class="2">扇形</div>
+  <div class="3">半圆</div>
+
+</body>
+</html>

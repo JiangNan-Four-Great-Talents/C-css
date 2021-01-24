@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>背景样式</title>
+
+  <style>
+    div{
+      width: 1000px;
+      height: 700px;
+      border: 1px solid red;
+      background-image: url(../../../Images/backgroundImages/backimg01.png);
+      /* 默认是全部平铺的 */
+    }
+    .div1{
+      background-repeat: repeat-x;
+      /* 向x轴平铺 */
+    }
+    .div2{
+      background-repeat: repeat-y;
+      /* 向y轴平铺 */
+    }
+    .div3{
+      background-repeat: no-repeat;
+      /* 不平铺，仅显示一个图像 */
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="div1"></div>
+  <div class="div2"></div>
+  <div class="div3"></div>
+  
+</body>
+</html>

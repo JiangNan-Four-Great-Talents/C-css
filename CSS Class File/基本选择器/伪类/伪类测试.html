@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪类选择测试</title>
+
+  <style>
+    .d1{
+      width: 100px;
+      height: 300px;
+      border: 1px solid green;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    a:link{
+      color: black;
+    }
+    a:visited{
+      color: aqua;
+    }
+    a:hover{
+      color: blanchedalmond;
+    }
+    a:active{
+      /* 鼠标按下链接时出现黑色虚线框 */
+      border: 1px dashed black;
+    }
+    div[class="da"]{
+      margin: 10px 6px;
+    }
+
+    /* 关于visited和linked样式失效问题：
+      由于其他浏览器有缓存等的原因，导致a:visited的属性在网页载入之后就会生效；
+      仅有IE浏览器可以正常使用此样式
+     */
+  </style>
+
+</head>
+<body>
+
+  <div class="d1">
+    <div class="da"><a href="https://www.baidu.com/" target="_blank" class="a1">百度一下</a><br>
+    </div>
+    <div  class="da"><a href="https://www.baidu.com/" target="_blank" class="a1">百度两下</a><br>
+    </div>
+    <div  class="da"><a href="https://www.baidu.com/" target="_blank" class="a1">百度三下</a><br>
+    </div>
+    <div  class="da"><a href="https://www.baidu.com/" target="_blank" class="a1">百度四下</a><br>
+    </div>
+
+  </div>
+
+
+</body>
+</html>

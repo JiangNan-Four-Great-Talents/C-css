@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>title</title>
+
+        <style>
+            /* 后代选择器 */
+            h1 p{
+                color: tomato;
+            }
+
+
+            /* 子类选择器 */
+            h2>p{
+                color: yellowgreen;
+            }
+
+            /* 相邻兄弟选择器 
+            （仅一个，向下）*/
+            .xd1+h1{
+                color: turquoise;
+            }
+
+            /* 通用选择器 
+            （所有同级）*/
+            .ty1~h2{
+                color: violet;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- 测试文本 -->
+        <h1 class="xd1">h11</h1>
+        <h1>h12</h1>
+        <h1>
+            h1标签
+            <p>p11</p>
+            <p>p12</p>
+            <p>
+                p标签
+                <h2 class="ty1">h21</h2>
+                <h2>h22</h2>
+                <h2>
+                    h2标签
+                    <p>p21</p>
+                </h2>
+            </p>
+        </h1>
+        <h1>h13</h1>
+        <h1>
+            h1标签
+            <p>p13</p>
+            <p>p14</p>
+            <p>
+                p标签
+                <h2>h23</h2>
+                <h2>
+                    h2标签
+                    <p>p22</p>
+                    <p>p23</p>
+                </h2>
+            </p>
+        </h1>
+    </body>
+
+</html>

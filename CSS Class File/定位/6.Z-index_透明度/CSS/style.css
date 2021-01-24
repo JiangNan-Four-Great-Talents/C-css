@@ -1,0 +1,35 @@
+#content{
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 25px;
+  border: 1px black solid;
+  width: 329px;
+}
+ul,li{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+/* 父级元素设置为相对定位 */
+#content ul{
+  position: relative;
+}
+.tipText{
+  color: rgb(6, 221, 192);
+  position: absolute;
+  left: 130px;
+  top: 413px;
+  z-index: 10;
+}
+.tipBG{
+  position: absolute;
+  top: 413px;
+  width: 329px;
+  height: 25px;
+  background-color: rgb(252, 223, 145);
+  opacity: 0.8;   /* 透明度 */
+  filter: grayscale(100%);    
+  /* 设置灰度，（100%灰度为黑白） */
+}

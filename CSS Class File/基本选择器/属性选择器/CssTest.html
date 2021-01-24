@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>title</title>
+
+  <!-- 属性选择器 (重要)-->
+
+  <style>
+    .demo{
+      display: flex;
+      flex-direction: row;
+    }
+
+
+    .demo a{
+      float: left;
+      display: block;
+      height: 50px;
+      width: 50px;
+      border-radius: 10px;
+      background-color: aqua;
+      text-align: center;
+      color: black;
+      text-decoration: none;
+      margin-right: 6px;
+      font: bold 20px/50px "Times New Roman";
+    }
+
+
+    /* 选择存在id属性的标签   a[]{}   +正则表达式*/
+    /* a[id]{
+      background: yellow;
+    } */
+    a[id="last"]{
+      background: yellow;
+    }
+    /* 选择class属性中包含links的标签
+    ~=：包含；    =：完全匹配
+
+    *=：[foo*="bar]：选择foo属性值中包含子串“bar”的所有元素
+    而“~=”即根据属性值中出现的一个用 空格 分隔的词来选择
+
+    a[class*="links"]{
+      background: red;
+    } */
+
+    /* 选中 href 中以 http 开头的元素 
+    ^= 以此开头
+    $= 以此结尾
+    *= 包含
+    ~= 包含，以空格分隔
+     */
+    a[href^="http"]{
+      background: red;
+    }
+
+
+
+  </style>
+
+
+</head>
+<body>
+
+
+  <div class="demo">
+    <a href="http://www.baidu.com" class="links item first" id="first">1</a>
+    <a href="image/123.jpg" class="links item active" target="_blank" title="test!">2</a>
+    <a href="image/1234.jpg" class="links item">3</a>
+    <a href="123.jpg" class="links item">4</a>
+    <a href="1.jpg" class="links item">5</a>
+    <a href="2.jpg" class="links item">6</a>
+    <a href="3.xml" class="links item">7</a>
+    <a href="4.doc" class="links item">8</a>
+    <a href="5.png" class="links item">9</a>
+    <a href="acbd.jpg" class="links item last" id="last">10</a>
+
+  </div>
+</body>
+</html>

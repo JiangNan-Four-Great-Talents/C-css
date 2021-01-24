@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位</title>
+
+    <!--绝对定位
+       1、在没有父元素定位的前提下，相对于浏览器定位
+       2、假设父级元素存在定位，通常会相对于父级元素进行偏移
+       3、在父级元素范围内偏移
+       绝对偏移后不在标准文档流中，原位置不保留
+     -->
+
+    <style>
+      div{
+        margin: 10px;
+        padding: 6px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+      #main{
+        border: 1px red solid;
+        padding: 0px;
+      }
+      #first{
+        border: 1px green dashed;
+      }
+      #second{
+        border: 1px violet dashed;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+      }
+      #third{
+        border: 1px skyblue dashed;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <div id="main">
+      <div id="first">box1</div>
+      <div id="second">box2</div>
+      <div id="third">box3</div>
+    </div>
+  
+  
+  </body>
+</html>

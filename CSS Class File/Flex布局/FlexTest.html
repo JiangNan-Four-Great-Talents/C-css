@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex布局测试</title>
+
+  <style>
+    /* 
+    容器的属性：
+
+    * flex-direction      项目在主轴上的的排列方向  row | row-reverse | column | column-reverse
+    * flex-wrap           换行方式    nowrap（默认）：不换行
+                                     wrap：换行，第一行在上方
+                                     wrap-reverse：换行，第一行在下方
+    * flex-flow           flex-direction和flex-wrap的简写
+    * justify-content     justify-content定义项目在主轴上的对齐方式
+    * align-items         align-items定义项目在交叉轴上对齐方式
+    * align-content        align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用
+
+     */
+
+
+
+  div a{
+    height: 50px;
+      width: 50px;
+      float: left;
+      display: block;
+      border-radius: 10px;      /* 为组件添加圆边角效果 */
+      background-color: aqua;
+      text-align: center;
+      color: black;
+      text-decoration: none;
+      margin-right: 6px;
+      font: bold 20px/50px "Times New Roman";
+    }
+    .demo1{
+      /* 声明使用flex布局 */
+      display: flex;
+      /* 组件排列方式及方向 */
+      flex-direction: row-reverse;
+    }
+
+    .demo2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .demo2 a{
+      background-color: rgb(77, 226, 64);
+      margin: 0px 0px 10px 0px;
+    }
+    .demo3{
+      display: flex;
+      flex-wrap: row nowrap;
+      /* justify-content: center;      沿主轴居中对齐 */
+      justify-content: space-around;
+    }
+    .demo3 a{
+      background-color: rgb(218, 169, 215);
+    }
+    .demo4{
+      display: flex;
+      flex-wrap: row nowrap;
+      justify-content: center;
+    }
+    .demo4 a{
+      background-color: rgb(221, 36, 221);
+      margin: 6px;
+    }
+    .demo5{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .demo5 a{
+      background-color: rgb(45, 58, 233);
+      margin: 0px 0px 6px 0px;
+    }
+
+
+    /* 
+    项目的属性：
+    * order         order定义项目的排列顺序。数值越小，排列越靠前，默认为0
+    * flex-grow     flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大
+    * flex-shrink   flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小
+    * flex-basis    flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）
+                      浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小
+    * flex          flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选
+    * align-self    align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。
+                      默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch
+     */
+     .demo1 a{
+       flex-grow: 1;
+     }
+     .demo1 a[class="1"]{
+       flex-grow: 2;
+     }
+     .demo1 a[class="2"]{
+       flex-grow: 3;
+     }
+     .demo1 a[class="3"]{
+       flex-basis: 100px
+     }
+
+  </style>
+
+</head>
+<body>
+
+
+  <div class="demo1">
+    <a href="http://www.baidu.com" class="1" id="first">1</a>
+    <a href="image/123.jpg" class="2" target="_blank" title="test!">2</a>
+    <a href="image/1234.jpg" class="3">3</a>
+    <a href="123.jpg" class="4">4</a>
+    <a href="1.jpg" class="5">5</a>
+    <a href="2.jpg" class="6">6</a>
+    <a href="3.xml" class="7">7</a>
+    <a href="4.doc" class="8">8</a>
+    <a href="5.png" class="9">9</a>
+    <a href="acbd.jpg" class="10" id="last">10</a>
+
+  </div>
+  <br>
+  <div class="demo2">
+    <a href="http://www.baidu.com" class="a1">1</a>
+    <a href="image/123.jpg" class="a2" target="_blank" title="test!">2</a>
+    <a href="image/1234.jpg" class="a3">3</a>
+    <a href="123.jpg" class="a4">4</a>
+    <a href="1.jpg" class="a5">5</a>
+    <a href="2.jpg" class="a6">6</a>
+    <a href="3.xml" class="a7">7</a>
+    <a href="4.doc" class="a8">8</a>
+    <a href="5.png" class="a9">9</a>
+    <a href="acbd.jpg" class="a10" id="last">10</a>
+  </div>
+  <div class="demo3">
+    <a href="http://www.baidu.com" class="a1">1</a>
+    <a href="image/123.jpg" class="a2" target="_blank" title="test!">2</a>
+    <a href="image/1234.jpg" class="a3">3</a>
+    <a href="123.jpg" class="a4">4</a>
+    <a href="1.jpg" class="a5">5</a>
+    <a href="2.jpg" class="a6">6</a>
+    <a href="3.xml" class="a7">7</a>
+    <a href="4.doc" class="a8">8</a>
+    <a href="5.png" class="a9">9</a>
+    <a href="acbd.jpg" class="a10" id="last">10</a>
+  </div>
+  <div class="demo4">
+    <a href="http://www.baidu.com" class="a1">1</a>
+    <a href="image/123.jpg" class="a2" target="_blank" title="test!">2</a>
+    <a href="image/1234.jpg" class="a3">3</a>
+    <a href="123.jpg" class="a4">4</a>
+    <a href="1.jpg" class="a5">5</a>
+    <a href="2.jpg" class="a6">6</a>
+    <a href="3.xml" class="a7">7</a>
+    <a href="4.doc" class="a8">8</a>
+    <a href="5.png" class="a9">9</a>
+    <a href="acbd.jpg" class="a10" id="last">10</a>
+  </div>
+  <div class="demo5">
+    <a href="http://www.baidu.com" class="a1">1</a>
+    <a href="image/123.jpg" class="a2" target="_blank" title="test!">2</a>
+    <a href="image/1234.jpg" class="a3">3</a>
+    <a href="123.jpg" class="a4">4</a>
+    </div>
+
+</body>
+</html>

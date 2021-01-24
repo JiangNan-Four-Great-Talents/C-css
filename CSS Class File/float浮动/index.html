@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float浮动</title>
+
+    <!-- 
+     float: 浮动
+     left
+     right
+     none
+     inherit
+    -->
+    <!-- 
+      clear:
+      left    清除左侧浮动
+      right   清除右侧浮动
+      both    清除元素两侧的浮动效果
+     -->
+
+     <!-- 浮动后或造成父级元素边框塌陷的问题
+      解决方法：
+        1、增加父级元素的高度
+        .father{
+          border: 1px #000000 solid;
+          hright: 800px;
+        }
+
+        2、增加一个空的div，设置margin,padding为0，并清除两侧浮动
+        .clear{
+          margin: 0;
+          padding: 0;
+          clear: both;
+        }
+        //尽量避免使用空div
+
+        3、overflow
+          overflow:  hidden  scroll  auto
+          当父类不指定height和width时，overflow会自动根据子类大小确定边框
+
+          4、在父类添加一个伪类 （推荐）
+          [父类]:after{
+            content:'';
+            display:block;
+            clear:both;
+          }
+      -->
+
+  <style>
+    div{
+      margin: 10px;
+      padding: 5px;
+    }
+    #main{
+      border: 1px #000000 solid;
+    }
+    .d1{
+      border: 1px #000000 dashed;
+      display: inline-block;
+      float: left;
+    }
+    .d2{
+      border: 1px red solid;
+      display: inline-block;
+      float: left;
+    }
+    .d3{
+      border: 1px green solid;
+      display: inline-block;
+      float: left;
+    }
+    .clear{
+      margin: 0;
+      padding: 0;
+      clear: both;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="main">
+    <div class="d1"><img src="../../Images/ex1.png" alt=""></div>
+    <div class="d2"><img src="../../Images/ex2.jpg" alt=""></div>
+    <div class="d3">这是一段测试文字</div>
+    <div class="clear"></div>
+
+</div>
+</body>
+</html>

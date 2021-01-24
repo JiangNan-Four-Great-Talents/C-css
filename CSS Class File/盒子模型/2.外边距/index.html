@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>盒子模型</title>
+
+  <!-- 外边距可以用来居中元素
+  margin: 0 auto;   仅写两个元素分别代表： 上下 左右
+  -->
+  <style>
+
+    #box{
+      width: 400px;
+      border: 1px solid red;
+      margin: 0px auto;      /* 仅设置两个值，分别指定上下、左右的外边距 */
+      /* margin: 0px;    /* 指定所有方位的外边距的值 */
+      /* margin: 0px 0px 0px 0px;    /* 分别按照:上、右、下、左的顺序指定外边距（顺时针顺序） */
+    }
+    form{
+      background-color: #8EC5FC;
+      background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+    }
+    div h2{
+      font-size: 16px;
+      background-color: #85FFBD;
+      background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+      line-height: 30px;
+      color: rgb(85, 47, 175);
+      margin: 0px auto;
+    }
+
+    input{
+      border: 1px solid yellowgreen;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div id="box">
+    <h2>用户登录</h2>
+    <form action="#">
+      <div>
+        <span>用户名: </span>
+        <input type="text">
+      </div>
+      <div>
+        <span>密码: </span>
+        <input type="text">
+      </div>
+      <div>
+        <span>邮箱: </span>
+        <input type="text">
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

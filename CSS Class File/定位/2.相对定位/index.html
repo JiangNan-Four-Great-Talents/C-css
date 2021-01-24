@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>相对定位</title>
+  <!--相对定位 
+    相对于自己原来的位置进行偏移
+    使用相对定位，元素仍在标准文档流中
+   -->
+  <style>
+    div{
+      margin: 10px;
+      padding: 6px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    #main{
+      border: 1px red solid;
+      padding: 0px;
+    }
+    #first{
+      border: 1px green dashed;
+      position: relative;
+      top: -10px;
+      left: 20px;
+    }
+    #second{
+      border: 1px violet dashed;
+      position: relative;
+      right: 30px;
+    }
+    #third{
+      border: 1px skyblue dashed;
+      position: relative;
+      top: 20px;
+      left: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="main">
+    <div id="first">box1</div>
+    <div id="second">box2</div>
+    <div id="third">box3</div>
+  </div>
+
+
+</body>
+</html>

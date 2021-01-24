@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>相对定位-盒子练习</title>
+
+  <!-- 
+    使用相对定位实现盒子效果
+   -->
+
+  <style>
+    .box{
+      height: 300px;
+      width: 300px;
+      padding: 10px;
+      border: 1px red solid;
+    }
+    a{
+      height: 100px;
+      width: 100px;
+      text-decoration: none;
+      background: #ff02d5;
+      line-height: 100px;
+      text-align: center;
+      color: white;
+      display: inline-block;
+    }
+    a:hover{
+      background-color: rgb(41, 144, 241);
+    }
+    .a2{
+      position: relative;
+      left: 100px;
+    }
+    .a3{
+      position: relative;
+      left: 100px;
+    }
+    .a4{
+      position: relative;
+      left: 100px;
+      top: 100px;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="box">
+    <a class="a1" href="">方块1</a>
+    <a class="a2" href="">方块2</a>
+    <a class="a3" href="">方块3</a>
+    <a class="a4" href="">方块4</a>
+    <a class="a5" href="">方块5</a>
+  </div>
+
+</body>
+</html>

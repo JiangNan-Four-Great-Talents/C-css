@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z-Index</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- 
+    Z-Index
+    类似层级的概念
+    规定了网页中元素显示排序的顺序
+    z-index: [值] 越大，优先级越高；元素越在上层显示
+    [0~999]
+
+    opacity
+    透明度[0~1]
+    定义元素显示的透明度
+
+    filter
+    滤镜
+    filter: grayscale(100%);   
+    /* 设置灰度，（100%灰度为黑白） */
+    filter: opacity(100%);
+    /* 设置透明度 */
+  -->
+</head>
+<body>
+  <div id="content">
+    <ul>
+      <li><img src="image/painting.jpg" alt="" style="height: 474px;"></li>
+      <li class="tipText">主题：绘画</li>
+      <li class="tipBG"></li>
+      <li class="tipType">类型：人物模型描绘</li>
+    </ul>
+  </div>
+</body>
+</html>
